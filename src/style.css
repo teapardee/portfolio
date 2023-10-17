@@ -11,13 +11,14 @@
 
 body {
   position: relative;
-  background: rgb(7, 7, 94);
+  background: #07075e;
   background: radial-gradient(
     circle,
     rgba(7, 7, 94, 1) 0%,
     rgba(2, 0, 36, 1) 100%
   );
 }
+
 .background {
   position: absolute;
   height: 100vh;
@@ -26,11 +27,32 @@ body {
 }
 
 #footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: absolute;
-  bottom: 20px;
-  right: 10px;
+  bottom: 0px;
+  left: 10px;
   opacity: 0.75;
   cursor: pointer;
+}
+
+#footer img {
+  height: 48px;
+  width: 48px;
+  margin-bottom: 10px;
+}
+
+#footer img:hover {
+  transform: scale(0.75);
+  opacity: 0.5;
+}
+
+#line {
+  height: 15vh;
+  width: 2px;
+  background-color: white;
+  margin-top: 10px;
 }
 
 #main-wrapper {
@@ -45,11 +67,16 @@ body {
 
 /* Header */
 
+br {
+  display: block;
+  content: '';
+  margin-top: 2.5rem;
+}
+
 #header-container {
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin-bottom: 5rem;
 }
 
 h1,
@@ -57,8 +84,19 @@ p {
   margin: 5px;
 }
 
-p:last-of-type {
-  margin: 20px 0 20px 0;
+#top {
+  font-size: inherit;
+
+  font-style: italic;
+}
+
+#top:hover {
+  color: rgb(255, 208, 0);
+}
+
+#name {
+  color: #5555e6;
+  font-size: inherit;
 }
 
 /* Grid */
@@ -86,10 +124,6 @@ p:last-of-type {
   margin-bottom: 2rem;
 }
 
-.project > img:hover {
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-
 .project-grid {
   display: grid;
   grid-template-columns: repeat(2, min-content);
@@ -112,4 +146,5 @@ p:last-of-type {
   transform: scale(1.1);
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   cursor: pointer;
+  border: 2px solid rgb(255, 208, 0);
 }
