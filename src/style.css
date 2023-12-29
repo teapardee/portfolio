@@ -102,10 +102,13 @@ p {
 /* Grid */
 
 #portfolio-grid {
-  display: grid;
-  grid-template: auto / repeat(2, min-content);
+  /* display: grid;
+  grid-template: auto / repeat(3, min-content);
   max-width: 75vw;
-  text-align: center;
+  text-align: center; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .interior-grid {
