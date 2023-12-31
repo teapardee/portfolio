@@ -164,7 +164,8 @@ p {
 
 #expanded-container {
   display: none;
-  position: absolute;
+  flex: 1;
+  position: fixed;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -177,10 +178,21 @@ p {
 
 #expanded-tile {
   display: flex;
-  z-index: 2;
-  height: 60vh;
-  width: 80vw;
   background-color: white;
+  position: relative;
+  z-index: 2;
+  height: 70vh;
+  width: auto;
+  padding: 40px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 40px;
+  cursor: pointer;
+  margin: 5px;
 }
 
 #expanded-tile > img {
